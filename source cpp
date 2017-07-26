@@ -1,0 +1,113 @@
+#include <iostream>
+#include <string>
+#include <thread>
+#include <chrono>
+
+
+using namespace std;
+
+int jep[5][5];
+string jepAns[5][5];
+string jepQ[5][5];
+
+
+void setupGame()
+{
+	//
+	jepQ[0][0] = "";
+	jepQ[0][1] = "";
+	jepQ[0][2] = "";
+	jepQ[0][3] = "";
+	jepQ[0][4] = "";
+	//
+	jepQ[1][0] = "";
+	jepQ[1][2] = "";
+	jepQ[1][3] = "";
+	jepQ[1][4] = "";
+	//
+	jepQ[2][0] = "";
+	jepQ[2][1] = "";
+	jepQ[2][2] = "";
+	jepQ[2][3] = "";
+	jepQ[2][4] = "";
+	//
+	jepQ[3][0] = "";
+	jepQ[3][1] = "";
+	jepQ[3][2] = "";
+	jepQ[3][3] = "";
+	jepQ[3][4] = "";
+	//
+	jepQ[4][0] = "";
+	jepQ[4][1] = "";
+	jepQ[4][2] = "";
+	jepQ[4][3] = "";
+	jepQ[4][4] = "";
+
+	//
+	jepAns[0][0] = "";
+	jepAns[0][1] = "";
+	jepAns[0][2] = "";
+	jepAns[0][3] = "";
+	jepAns[0][4] = "";
+	//
+	jepAns[1][0] = "";
+	jepAns[1][2] = "";
+	jepAns[1][3] = "";
+	jepAns[1][4] = "";
+	//
+	jepAns[2][0] = "";
+	jepAns[2][1] = "";
+	jepAns[2][2] = "";
+	jepAns[2][3] = "";
+	jepAns[2][4] = "";
+	//
+	jepAns[3][0] = "";
+	jepAns[3][1] = "";
+	jepAns[3][2] = "";
+	jepAns[3][3] = "";
+	jepAns[3][4] = "";
+	//
+	jepAns[4][0] = "";
+	jepAns[4][1] = "";
+	jepAns[4][2] = "";
+	jepAns[4][3] = "";
+	jepAns[4][4] = "";
+}
+
+int main()
+{
+
+	setupGame();
+
+
+
+
+
+
+	cout << "Welcome to the wonderful game of Jeopardy!\n";
+	this_thread::sleep_for(chrono::seconds(1));
+	cout << "\nToday's categories are: \n\n (Drumroll please)\n\n";
+	this_thread::sleep_for(chrono::milliseconds(1250));
+	cout << "Math\t"; 
+	this_thread::sleep_for(chrono::milliseconds(750));
+	cout << "Places\t";
+	this_thread::sleep_for(chrono::milliseconds(750));
+	cout << "Movies\t";
+	this_thread::sleep_for(chrono::milliseconds(750));
+	cout << "iD Tech\t";
+	this_thread::sleep_for(chrono::milliseconds(750));
+	cout << "Gaming\n";
+	this_thread::sleep_for(chrono::milliseconds(1000));
+
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			jep[i][j] = 100 * (i+1);
+			cout << jep[i][j] << "\t";
+		}
+		cout << "\n";
+	}
+
+
+}
